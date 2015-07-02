@@ -10,6 +10,9 @@
 		6EA03F3A1B453EB900C7D24D /* CarthageModuleExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA03F391B453EB900C7D24D /* CarthageModuleExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EA03F401B453EB900C7D24D /* CarthageModuleExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA03F341B453EB900C7D24D /* CarthageModuleExample.framework */; };
 		6EA03F471B453EB900C7D24D /* CarthageModuleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA03F461B453EB900C7D24D /* CarthageModuleExampleTests.swift */; };
+		6EA03F571B45458100C7D24D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA03F551B45450700C7D24D /* Alamofire.framework */; };
+		6EA03F581B45459700C7D24D /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6EA03F551B45450700C7D24D /* Alamofire.framework */; };
+		6EA03F5A1B4545C200C7D24D /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA03F591B4545C200C7D24D /* Core.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 		6EA03F3F1B453EB900C7D24D /* CarthageModuleExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarthageModuleExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA03F451B453EB900C7D24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA03F461B453EB900C7D24D /* CarthageModuleExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageModuleExampleTests.swift; sourceTree = "<group>"; };
+		6EA03F551B45450700C7D24D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		6EA03F591B4545C200C7D24D /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA03F571B45458100C7D24D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,7 @@
 		6EA03F2A1B453EB900C7D24D = {
 			isa = PBXGroup;
 			children = (
+				6EA03F551B45450700C7D24D /* Alamofire.framework */,
 				6EA03F361B453EB900C7D24D /* CarthageModuleExample */,
 				6EA03F431B453EB900C7D24D /* CarthageModuleExampleTests */,
 				6EA03F351B453EB900C7D24D /* Products */,
@@ -73,6 +80,7 @@
 			children = (
 				6EA03F391B453EB900C7D24D /* CarthageModuleExample.h */,
 				6EA03F371B453EB900C7D24D /* Supporting Files */,
+				6EA03F591B4545C200C7D24D /* Core.swift */,
 			);
 			path = CarthageModuleExample;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA03F581B45459700C7D24D /* Alamofire.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA03F5A1B4545C200C7D24D /* Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,25 +333,36 @@
 		6EA03F4B1B453EB900C7D24D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageModuleExample/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		6EA03F4C1B453EB900C7D24D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageModuleExample/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
