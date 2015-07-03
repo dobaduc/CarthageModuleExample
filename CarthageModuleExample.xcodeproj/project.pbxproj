@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3334861B4626BF00BE7167 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3334851B4626BF00BE7167 /* Alamofire.framework */; };
 		6EA03F3A1B453EB900C7D24D /* CarthageModuleExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA03F391B453EB900C7D24D /* CarthageModuleExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EA03F401B453EB900C7D24D /* CarthageModuleExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA03F341B453EB900C7D24D /* CarthageModuleExample.framework */; };
 		6EA03F471B453EB900C7D24D /* CarthageModuleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA03F461B453EB900C7D24D /* CarthageModuleExampleTests.swift */; };
-		6EA03F571B45458100C7D24D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA03F551B45450700C7D24D /* Alamofire.framework */; };
-		6EA03F581B45459700C7D24D /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6EA03F551B45450700C7D24D /* Alamofire.framework */; };
 		6EA03F5A1B4545C200C7D24D /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA03F591B4545C200C7D24D /* Core.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,13 +25,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E3334851B4626BF00BE7167 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		6EA03F341B453EB900C7D24D /* CarthageModuleExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarthageModuleExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA03F381B453EB900C7D24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA03F391B453EB900C7D24D /* CarthageModuleExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarthageModuleExample.h; sourceTree = "<group>"; };
 		6EA03F3F1B453EB900C7D24D /* CarthageModuleExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarthageModuleExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA03F451B453EB900C7D24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA03F461B453EB900C7D24D /* CarthageModuleExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageModuleExampleTests.swift; sourceTree = "<group>"; };
-		6EA03F551B45450700C7D24D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		6EA03F591B4545C200C7D24D /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA03F571B45458100C7D24D /* Alamofire.framework in Frameworks */,
+				6E3334861B4626BF00BE7167 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +58,7 @@
 		6EA03F2A1B453EB900C7D24D = {
 			isa = PBXGroup;
 			children = (
-				6EA03F551B45450700C7D24D /* Alamofire.framework */,
+				6E3334851B4626BF00BE7167 /* Alamofire.framework */,
 				6EA03F361B453EB900C7D24D /* CarthageModuleExample */,
 				6EA03F431B453EB900C7D24D /* CarthageModuleExampleTests */,
 				6EA03F351B453EB900C7D24D /* Products */,
@@ -132,6 +131,7 @@
 				6EA03F301B453EB900C7D24D /* Frameworks */,
 				6EA03F311B453EB900C7D24D /* Headers */,
 				6EA03F321B453EB900C7D24D /* Resources */,
+				6E3334871B4626C400BE7167 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -200,7 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA03F581B45459700C7D24D /* Alamofire.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +211,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E3334871B4626C400BE7167 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6EA03F2F1B453EB900C7D24D /* Sources */ = {
@@ -420,6 +436,7 @@
 				6EA03F4C1B453EB900C7D24D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EA03F4D1B453EB900C7D24D /* Build configuration list for PBXNativeTarget "CarthageModuleExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +445,7 @@
 				6EA03F4F1B453EB900C7D24D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
